@@ -53,13 +53,13 @@
                        
                     $carbon_footprint = $total_distance * $carbon_footprint_multiplier;
                     $unpaid_amount = round($amount_multiplier * $unpaid_distance,2);
-                    $total_amount = round($amount_multiplier * $total_distance,2)-$unpaid_amount;
+                    $paid_amount = round($amount_multiplier * $total_distance,2)-$unpaid_amount;
                     $total_trips=mysqli_num_rows($result);
 
                     $returnJSON["total_distance"] = $total_distance;
                     $returnJSON["unpaid_distance"] = $unpaid_distance;
                     $returnJSON["carbon_footprint"] = $carbon_footprint;
-                    $returnJSON["total_amount"] = $total_amount;
+                    $returnJSON["paid_amount"] = $paid_amount;
                     $returnJSON["unpaid_amount"] = $unpaid_amount;
                     $returnJSON["total_trips"] = $total_trips;
                     $returnJSON["unpaid_trips"] = $total_trips - $paid;
