@@ -47,7 +47,7 @@ def get_current_status(intent, session):
     should_end_session = False
     reprompt_text=None
     url="http://twentyeight10.tech/rhok.php/get"
-    post_data = {"token":"2343"}
+    post_data = {"token":"2342"}
     res=requests.post(url,data=post_data)
     res=res.json()
     speech_output="Your unpaid trips are "+res["unpaid_distance"]+" kilometers and outstanding amount is "+res["unpaid_amount"]+" rupees. Do you want to pay now?"
@@ -60,7 +60,7 @@ def pay_now(intent,session):
     should_end_session = True
     reprompt_text=None
     url="http://twentyeight10.tech/rhok.php/donate"
-    post_data = {"token":"2343"}
+    post_data = {"token":"2342"}
     res=requests.post(url,data=post_data)
     speech_output="Your payment is processed successfully. Thank You for contributing. Have a nice day"
     return build_response(session_attributes, build_speechlet_response(
