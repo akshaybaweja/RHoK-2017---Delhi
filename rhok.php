@@ -1,8 +1,8 @@
  <?php   
     $host="localhost";
-    $username="akshay_baweja";
-    $password="baweja9899";
-    $database="twentyeight10_projects";
+    $username="username-here";
+    $password="password-here";
+    $database="database-here";
     $conn = mysqli_connect($host,$username,$password,$database);
 
 	$method = $_SERVER['REQUEST_METHOD'];
